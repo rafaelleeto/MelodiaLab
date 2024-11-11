@@ -1,11 +1,16 @@
 # MelodiaLab 🎶
+
 Plataforma de organização e criação musical, voltada para artistas e músicos que desejam criar, gerenciar e personalizar seus projetos musicais.  
+![Logo](logo.png)
 
 ## Tecnologias Utilizadas
 
 - *Backend*: Python com Flask
 - *Frontend*: HTML, CSS e JavaScript
 - *Banco de Dados*: SQLite3 com Python
+
+## Diagrama de classes
+![Diagrama de Classes](Diagrama de Classes.jpg)
 
 ## Como instalar o sistema
 ### Requisitos 
@@ -19,7 +24,6 @@ Plataforma de organização e criação musical, voltada para artistas e músico
 
 ### Clonar repositório do Github
 1. Abra o Visual Studio Code e clique no botão "Controle de código de fonte"
-![Imagem 01](readme-imgs/img01.png)
 
 2. Clique em "Clonar repositório", "Clonar de Github" e Clique em "Permitir" na janela que vai aparecer.
 
