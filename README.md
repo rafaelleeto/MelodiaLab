@@ -1,7 +1,7 @@
 # MelodiaLab 🎶
 
 Plataforma de organização e criação musical, voltada para artistas e músicos que desejam criar, gerenciar e personalizar seus projetos musicais.  
-![Logo](logo.png)
+![Logo](Logo.png)
 
 ## Tecnologias Utilizadas
 
@@ -10,7 +10,7 @@ Plataforma de organização e criação musical, voltada para artistas e músico
 - *Banco de Dados*: SQLite3 com Python
 
 ## Diagrama de classes
-![Diagrama de Classes](Diagrama de Classes.jpg)
+![Diagrama de Classes](/Diagrama%20de%20Classes.jpg)
 
 ## Como instalar o sistema
 ### Requisitos 
