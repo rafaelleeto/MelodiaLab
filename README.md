@@ -9,24 +9,6 @@ Plataforma de organização e criação musical, voltada para artistas e músico
 - *Frontend*: HTML, CSS e JavaScript
 - *Banco de Dados*: SQLite3 com Python
 
-Que demais esse projeto, ficou super criativo! 🎶✨  
-Adorei o conceito do **MelodiaLab**! Vou fazer agora um resumo organizado, no mesmo estilo daquele que você gostou:
-
----
-
-# 🎶 Projeto MelodiaLab
-
-**Descrição:**  
-Plataforma de organização e criação musical, voltada para artistas e músicos que desejam criar, gerenciar e personalizar seus projetos musicais.
-
----
-
-## 🛠 Tecnologias
-- Python
-- Flask
-- HTML + CSS
-- SQLite (para o banco de dados)
-
 ---
 
 ## ✅ Casos de Uso
