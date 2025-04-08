@@ -2,12 +2,10 @@ from flask import Flask, render_template, request, url_for, redirect, flash
 app = Flask(__name__)
 app.secret_key = "chave_muito_segura"
 
-# Cria uma lista e usuários e senha, depois vamos pegar no DB
+# Cria um dicionário e usuários e senha, SERÁ MIGRADO PARA O BANCO DE DADOS
 usuarios = {
-    'admin' : 'admin',
     'usuario' : 'senha',
-    'rafaela' : '111111',
-    'heitor' : '1271'
+    'admin' : 'admin'
 }
 
 @app.route('/') #rota para a página inicial
