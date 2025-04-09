@@ -1,12 +1,8 @@
 from flask import Flask, render_template, request, url_for, redirect, flash
+from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
 app.secret_key = "chave_muito_segura"
-
-# Cria um dicionário e usuários e senha, SERÁ MIGRADO PARA O BANCO DE DADOS
-usuarios = {
-    'usuario' : 'senha',
-    'admin' : 'admin'
-}
+import database
 
 @app.route('/') #rota para a página inicial
 def index():
@@ -37,9 +33,22 @@ def verificar_login():
         flash('Usuário ou senha incorretos', 'danger')
         return redirect(url_for('login'))
 
-@app.route('/cadastro') #rota para a página de login
+@app.route('/cadastro',methods=['GET','POST'])
 def cadastro():
-    return render_template('cadastro.html')
+    if request.method=='GET':
+        return render_template('cadastro.html')
+    email=request.form['email']
+    nome=request.form['nome']
+    senha=generate_password_hash(request.form['senha'])
+    database.cadastro(email,nome,senha)
+    return redirect('/login.html')
+
+@app.route
+    
+    
+    
+    
+
 
 # parte principal do
 if __name__ == '__main__':
