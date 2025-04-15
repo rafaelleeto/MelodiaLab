@@ -1,5 +1,4 @@
 import sqlite3
-import app
 
 def conectar_banco():
     conexao=sqlite3.connect("musica.db")
