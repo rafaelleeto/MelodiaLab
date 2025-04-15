@@ -113,5 +113,43 @@ def excluir_conta():
     database.excluir_conta(email)
     return redirect('/')
 
+@app.route('/admin')
+def admin():
+    if session['email']=="leetobr@gmail.com":
+        return render_template('admin.html')
+    else:
+        return "Você não tem permissão para entrar nessa página!"
+
+@app.route('/admin/usuarios')
+def usuario():
+    if session['email']=="leetobr@gmail.com":
+        usuarios=database.pegar_todos_usuarios()
+        return render_template('usuarios.html',usuarios=usuarios)
+    else:
+        return "Você não tem permissão para entrar nessa página!"
+
+
+@app.route('/admin/excluir_usuario/<email>')
+def excluir_usuario_admin(email):
+    if not email=="leetobr@gmail.com":
+        database.excluir_conta(email)
+    return redirect(url_for('usuario'))
+
+@app.route('/admin/musicas')
+def listar_musicas_admin():
+    if session['email']=="leetobr@gmail.com":
+        musicas=database.pegar_todas_musicas()
+        return render_template('musicas.html',musicas=musicas)
+    else:
+        return "Você não tem permissão para entrar nessa página"
+    
+@app.route('/admin/excluir_musica/<id>')
+def admin_excluir_musica(id):
+    if session['email']=="leetobr@gmail.com":
+        database.deletar_musica(id)
+        return redirect(url_for('listar_musicas_admin'))
+    else:
+        return "Você não tem permissão para entrar nessa página"
+
 if __name__ == '__main__':
     app.run(debug=True)

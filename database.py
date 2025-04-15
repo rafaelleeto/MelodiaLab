@@ -81,6 +81,24 @@ def excluir_conta(email):
     conexao.commit()
     cursor.close()
     
+def pegar_todos_usuarios():
+    conexao = conectar_banco()
+    conexao.row_factory=sqlite3.Row
+    cursor = conexao.cursor()
+    cursor.execute('''SELECT * FROM usuarios ''')
+    conexao.commit()
+    return cursor.fetchall()
+
+def pegar_todas_musicas():
+    conexao = conectar_banco()
+    conexao.row_factory=sqlite3.Row
+    cursor = conexao.cursor()
+    cursor.execute('''SELECT * FROM musicas ''')
+    conexao.commit()
+    return cursor.fetchall()
+
+
+
 
     
 if __name__=="__main__":

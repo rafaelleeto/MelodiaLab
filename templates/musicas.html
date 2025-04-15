@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="/static/estilo.css">
+</head>
+<body id="home">
+    <img id="logo-home" src="/static/img/Logo texto.png">
+
+  
+   
+    <table>
+
+        <thead>
+
+
+            
+            <tr>
+                <th>ID</th>
+                <th>Nome Da Musica</th>
+                <th>Artista</th>
+                <th>Email Usuario</th>
+                <th>Capa</th>
+                <th></th>
+            </tr>
+
+
+        </thead>
+        <tbody>
+            {% for musica in musicas %}
+            <tr> 
+                <td> {{musica['id']}} </td> 
+                <td> {{musica['nome']}} </td>  
+                <td> {{musica['artista']}} </td> 
+                <td> {{musica['email_usuario']}} </td> 
+                <td> {{musica['capa']}} </td> 
+                <td><a href="/admin/excluir_musica/{{musica['id']}}">Excluir Musica</a></td>
+           
+            </tr>
+            
+            {% endfor %}
+        </tbody>
+
+
+
+
+    </table>
+        
+</body>
+</html>
